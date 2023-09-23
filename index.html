@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+     <title>Save User Input in JavaScript Object</title>
+ <link rel="stylesheet" href="style.css">
+    </head>
+ <body>
+    <div class="conteiner">
+        <form class="type-area ">
+            <label id="username" for="gmail":></label>
+            <input class="holder" type="gmail" id="name"required placeholder="Email adress or phone number">  
+            <br><br>
+            <label class="password" for="age"></label>
+            <input type="password" id="age" required placeholder="password">
+            <br><br>
+            <button type="button" onclick="saveUserInput()">Log in</button>
+        </form>
+    
+        <h2>Saved User Data</h2>
+        <p>Name: <span id="displayedName"></span></p>
+        <p>Age: <span id="displayedAge"></span></p>
+       </div>
+
+     
+
+
+
+
+
+     <script>
+         // Initialize an empty user object
+         var user = {};
+ 
+         // Function to save user input
+         function saveUserInput() {
+             // Get values from the form
+             var name = document.getElementById('name').value;
+             var age = document.getElementById('age').value;
+ 
+             // Update the user object with the input values
+             user.name = name;
+             user.age = age;
+ 
+             // Display the saved user data
+             document.getElementById('displayedName').textContent = user.name;
+             document.getElementById('displayedAge').textContent = user.age;
+ 
+             // Optionally, you can clear the form fields
+             document.getElementById('name').value = '';
+             document.getElementById('age').value = '';
+         }
+     </script>
+ </body>
+ </html>
+ 
